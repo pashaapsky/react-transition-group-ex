@@ -1,0 +1,17 @@
+.animate {
+  &-enter {
+    position: absolute;
+    transform: translateY(-170%);
+  }
+  &-enter-active {
+    transform: translateY(0);
+    transition: all 0.3s ease;
+  }
+  &-exit {
+    position: absolute;
+  }
+  &-exit-active {
+    transform: translateY(-170%);
+    transition: all 0.3s ease;
+  }
+}
