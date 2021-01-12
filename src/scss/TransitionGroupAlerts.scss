@@ -1,0 +1,41 @@
+.alert-box {
+  margin: 20px 0;
+
+  &-group {
+    padding: 20px;
+
+    background-color: bisque;
+    border: 1px solid black;
+  }
+
+  &-item {
+    padding: 10px;
+    border: 1px solid black;
+    border-radius: 3px;
+
+    background-color: aquamarine;
+
+    margin-bottom: 5px;
+  }
+
+  .remove-btn {
+    margin-right: 10px;
+  }
+}
+
+.alert-box-animate {
+  &-enter {
+    opacity: 0;
+  }
+  &-enter-active {
+    opacity: 1;
+    transition: opacity 500ms ease-in;
+  }
+  &-exit {
+    opacity: 1;
+  }
+  &-exit-active {
+    opacity: 0;
+    transition: opacity 500ms ease-in;
+  }
+}

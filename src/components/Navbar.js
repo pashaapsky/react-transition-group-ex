@@ -1,5 +1,6 @@
 import React, {Fragment, useState} from 'react';
-import {CSSTransition} from "react-transition-group";
+import {Transition, CSSTransition} from "react-transition-group";
+import {NavLink} from "react-router-dom";
 
 export const Navbar = ({children, ...restProps}) => {
     return (
@@ -11,15 +12,15 @@ export const Navbar = ({children, ...restProps}) => {
     );
 };
 
-export const NavbarItem = ({children, ...restProps}) => {
+export const NavbarItem = ({children, to, title, ...restProps}) => {
     const [isOpen, setIsOpen] = useState(false);
 
     return (
-        <li className="navbar-menu__item">
-            <a className="navbar-menu__link nav-link" href="#" onClick={() => setIsOpen(!isOpen)}>
+        <li className="navbar-menu__item" {...restProps}>
+            <NavLink className="navbar-menu__link nav-link" to={to || '#'} onClick={() => setIsOpen(!isOpen)}>
                 <span>😀</span>
-                Link
-            </a>
+                {title}
+            </NavLink>
 
             <CSSTransition in={isOpen} timeout={500} classNames="animate" unmountOnExit>
                 {children}

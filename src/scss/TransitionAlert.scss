@@ -1,0 +1,29 @@
+.transition-alert {
+  position: absolute;
+  top: 20%;
+  left: 30%;
+  padding: 20px;
+  border: 1px solid black;
+
+  background-color: green;
+  transition: all 500ms ease-in-out;
+
+  &-entering {
+    background-color: orange;
+    opacity: 0;
+  }
+
+  &-entered {
+    background-color: red;
+    opacity: 1;
+  }
+
+  &-exiting {
+    background-color: pink;
+    opacity: 0;
+  }
+
+  &-exited {
+    opacity: 0;
+  }
+}

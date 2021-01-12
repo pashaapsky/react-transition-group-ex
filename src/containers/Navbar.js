@@ -1,15 +1,17 @@
 import React, {useState} from 'react';
 import {DropdownItem, DropdownMenu, Navbar, NavbarItem} from "../components/Navbar";
-import {CSSTransition} from "react-transition-group";
 
 const NavbarContainer = () => {
-    const [inProp, setInProp] = useState(false);
-
     return (
         <Navbar>
-            <NavbarItem>
+            <NavbarItem exact to="/" title="Home"/>
+
+            <NavbarItem to="/about" title="About"/>
+            <NavbarItem to="/contact" title="Contact"/>
+
+            <NavbarItem title="Menu">
                 <DropdownMenu >
-                    <DropdownItem leftIcon="😀">
+                    <DropdownItem leftIcon="😀" >
                         Link
                     </DropdownItem>
 
